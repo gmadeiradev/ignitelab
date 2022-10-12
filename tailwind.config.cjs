@@ -11,19 +11,25 @@ module.exports = {
         xl: 24,
         "2xl": 32,
       },
+
       colors: {
         black: "#000",
         white: "#FFF",
 
-        "gray-900": "#121214",
-        "gray-900": "#202024",
-        "gray-900": "#7c7c8a",
-        "gray-900": "#c4c4cc",
-        "gray-900": "#e1e1e6",
+        gray: {
+          900: "#121214",
+          900: "#202024",
+          900: "#7c7c8a",
+          900: "#c4c4cc",
+          900: "#e1e1e6",
+        },
 
-        "cyan-500": "#81d8f7",
-        "cyan-300": "#9BE1FB",
+        cyan: {
+          500: "#81d8f7",
+          300: "#9BE1FB",
+        },
       },
+
       fontFamily: {
         sans: "Inter, sans-serif",
       },
