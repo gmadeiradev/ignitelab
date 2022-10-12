@@ -4,7 +4,7 @@ import { Slot } from '@radix-ui/react-slot';
 
 export interface ButtonProps {
     children: ReactNode;
-    asChild: boolean;
+    asChild?: boolean;
 }
 
 export function Button({ children, asChild }: ButtonProps) {
