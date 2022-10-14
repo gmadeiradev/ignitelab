@@ -1,6 +1,6 @@
-import { Text } from '../Text/Text'
 import { Meta, StoryObj } from '@storybook/react';
 
+import { Text } from '../Text/Text';
 import { Checkbox, CheckboxProps } from './Checkbox';
 
 export default {

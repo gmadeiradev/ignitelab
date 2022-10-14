@@ -1,6 +1,6 @@
 import './styles/global.css';
 
-import { Envelope, Lock, TextT } from 'phosphor-react';
+import { Envelope, Lock } from 'phosphor-react';
 
 import { Logo } from './assets/Logo';
 import { Text } from './components/Text/Text';
