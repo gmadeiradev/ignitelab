@@ -7,19 +7,25 @@ import { Text } from '../components/Text/Text';
 import { Button } from '../components/Button/Button';
 import { Heading } from '../components/Heading/Heading';
 import { TextInput } from '../components/TextInput/TextInput';
+import axios from 'axios';
 
 export function Signin() {
 
     const [isUserSignedIn, setIsUserSignedIn] = useState(false);
 
-    function handleSignin(event: FormEvent) {
+    async function handleSignin(event: FormEvent) {
         event.preventDefault();
+
+        await axios.post('/sessions', {
+            email: 'gsmmadeira1@gmail.com',
+            password: '12345678',
+        });
 
         setIsUserSignedIn(true);
     }
 
     return (
-        <div className='w-screen h-screen bg-gray-900 flex flex-col items-center justify-center text-gray-100'>            
+        <div className='w-screen h-screen bg-gray-900 flex flex-col items-center justify-center text-gray-100'>
             <header className='flex flex-col items-center '>
                 <Logo />
                 <Heading size='lg' className='mt-4'>
@@ -31,7 +37,7 @@ export function Signin() {
             </header>
             {/* form */}
             <form onSubmit={handleSignin} className='flex flex-col gap-4 items-stretch w-full max-w-sm mt-10'>
-            { isUserSignedIn && <Text>Login realizado com sucesso!</Text> }
+                {isUserSignedIn && <Text>Login realizado com sucesso!</Text>}
 
                 {/* email input */}
                 <label htmlFor='email' className='flex flex-col gap-3'>
